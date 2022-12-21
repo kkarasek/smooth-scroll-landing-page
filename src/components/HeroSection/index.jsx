@@ -27,7 +27,14 @@ const Hero = () => {
 		<>
 			<HeroSection id="hero">
 				<HeroBackground>
-					<BackgroundVideo autoPlay loop muted src={Video} type="video/mp4" />
+					<BackgroundVideo
+						autoPlay
+						loop
+						muted
+						playsInline
+						src={Video}
+						type="video/mp4"
+					/>
 				</HeroBackground>
 				<HeroContent>
 					<HeroH1>Virtual Banking Made Easy</HeroH1>
