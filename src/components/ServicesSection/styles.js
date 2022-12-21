@@ -4,7 +4,7 @@ export const ServicesSection = styled.section`
 	height: 800px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	background-color: #f7f7f7;
 	color: #100f0f;
@@ -14,14 +14,14 @@ export const ServicesSection = styled.section`
 	}
 
 	@media screen and (max-width: 768px) {
-		padding: 100px 0px;
+		padding: 0 20px;
 		height: 1300px;
 	}
 `;
 
 export const ServicesH1 = styled.h1`
 	font-size: 3rem;
-	margin-bottom: 80px;
+	margin: 90px 0;
 
 	@media screen and (max-width: 480px) {
 		font-size: 2rem;
@@ -45,6 +45,7 @@ export const ServicesWrapper = styled.div`
 	@media screen and (max-width: 768px) {
 		grid-template-columns: 1fr;
 		padding: 0 20px;
+		gap: 32px;
 	}
 `;
 

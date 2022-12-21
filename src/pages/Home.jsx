@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import styled from 'styled-components';
 
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
@@ -9,6 +8,7 @@ import Info from '../components/InfoSection';
 import Discover from '../components/DiscoverSection';
 import { aboutSectionData, signUpSectionData } from '../data/data';
 import Services from '../components/ServicesSection';
+import Footer from '../components/Footer';
 
 const Home = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +26,7 @@ const Home = () => {
 			<Discover />
 			<Services />
 			<Info {...signUpSectionData} primary={true} to={'hero'} />
+			<Footer />
 		</>
 	);
 };

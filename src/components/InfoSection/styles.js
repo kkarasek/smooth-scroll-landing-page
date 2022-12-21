@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const InfoSection = styled.section`
 	color: #f7f7f7;
 	background: ${({ lightBg }) => (lightBg ? '#f7f7f7' : '#100f0f')};
+	// #100f0f
 
 	@media screen and (max-width: 768px) {
 		padding: 100px 0px;

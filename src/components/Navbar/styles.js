@@ -5,7 +5,8 @@ import { Link as ScrollLink } from 'react-scroll';
 export const Nav = styled.nav`
 	display: flex;
 	/* background: #100f0f; */
-	background: rgba(16, 15, 15); /* 0.8 */
+	background: ${({ scrollNav }) =>
+		scrollNav ? 'rgba(16, 15, 15)' : 'rgba(16, 15, 15, 0.6)'};
 	color: #f7f7f7;
 	height: 80px;
 	align-items: center;

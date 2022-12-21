@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 import Video from '../../videos/background-video.mp4';
 import { Button } from '../Button/styles';
@@ -30,10 +31,15 @@ const Hero = () => {
 				</HeroBackground>
 				<HeroContent>
 					<HeroH1>Virtual Banking Made Easy</HeroH1>
-					<HeroP>
-						Sign up for a new account today and receive $250 in credit towards
-						your next payment
-					</HeroP>
+					<TypeAnimation
+						sequence={[
+							'Sign up for a new account today and receive $250 in credit towards your next payment',
+							500,
+						]}
+						speed={40}
+						wrapper={HeroP}
+						repeat={Infinity}
+					/>
 					<HeroBtnWrapper>
 						<Button
 							to="about"

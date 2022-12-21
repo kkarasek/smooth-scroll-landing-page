@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 import {
@@ -14,8 +14,20 @@ import {
 } from './styles';
 
 const Navbar = ({ toggle }) => {
+	const [scrollNav, setScrollNav] = useState(false);
+
+	const handleScroll = () =>
+		window.scrollY === 0 ? setScrollNav(false) : setScrollNav(true);
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<Nav>
+		<Nav scrollNav={scrollNav}>
 			<NavContainer>
 				<NavLogo to="hero" smooth={true} duration={500} offset={-80}>
 					dolla
