@@ -7,6 +7,7 @@ export const Nav = styled.nav`
 	/* background: #100f0f; */
 	background: ${({ scrollNav }) =>
 		scrollNav ? 'rgba(16, 15, 15)' : 'rgba(16, 15, 15, 0.6)'};
+
 	color: #f7f7f7;
 	height: 80px;
 	align-items: center;
